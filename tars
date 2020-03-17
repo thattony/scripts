@@ -1,0 +1,12 @@
+## find files by name and create a tar ball
+find arc/ -type f \( -name \*.log -o -name \*.messages \) -exec tar rvf here/here.arc.tar '{}' \;
+
+## bzip2 or gzip
+bzip2 -z archive_name
+gzip --best archive_name
+
+## extract files to dir
+tar xvfz archive_name.gz -C arc/
+
+## view files 
+tar tvf archive_name
